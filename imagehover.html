@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-rotate</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center; line-height: 45px;
+        }
+        h1 span{
+            color: #E01E48;
+        }
+        .box{
+            width: 400px;
+            
+            margin: 0 auto;
+            position: relative;
+            perspective: 1000px;
+        }
+        .box .box-img{
+            transform: rotateY(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+        .box:hover .box-img{
+            transform: rotateY(-90deg);
+        }
+        .box .box-img img{
+            width:100% ;
+            height: auto;
+        }
+        .box-content{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 100px 20px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 7);
+            transform: rotateY(90deg);
+            transition: all 0.5s ease-in-out 0s;
+        }
+        .box:hover .box-content{
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h1><span> Css Tutorial:Image Hover with Rotating</span></h1>
+    <div class="box">
+    <div class="box-img">
+        <img src="college.jpg" alt="">
+    </div>
+    <div class="box-content">
+        <h3>College-Function!</h3>
+    </div>
+</div>
+</body>
+</html>
